@@ -244,7 +244,7 @@
 /* About Section */
 .main {
     background-color: #131313;
-    padding: 10rem 0;
+    padding: 5rem 0;
   }
   
   .main_container {
@@ -284,6 +284,16 @@
     font-weight: 250;
     text-justify:distribute-all-lines;
   }
+
+  .descript span {
+    background-color: #ed8a7b;
+    /* background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%); */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
   
   .main_btn {
     font-size: 1.8rem;
@@ -335,7 +345,7 @@
     margin: 10px;
     height: 400px;
     width: 400px;
-    border-radius: 4px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -423,7 +433,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 10rem 0;
+    padding: 5rem 0;
   }
   
   .work h1 {
@@ -651,10 +661,3 @@
   }
 }
   
-
-
-
-
-
-
-
