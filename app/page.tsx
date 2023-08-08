@@ -29,14 +29,21 @@ import figma from "../public/figma.png";
 import umass from "../public/umass.png";
 import cics from "../public/cics.png";
 import headstart from "../public/headstart.png";
-import delta1 from "../public/delta1.jpg";
-import delta2 from "../public/delta2.jpg";
-import delta3 from "../public/delta3.jpg";
-import delta4 from "../public/delta4.jpg";
+import code from "../public/code.png";
+import data from "../public/data.png";
+import ui from "../public/ui.png";
+import involve from "../public/involvement.png";
+import graphic from "../public/graphic.png";
+import blog from "../public/blog.png";
 import { useState } from 'react';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+
+  const handleMailButtonClick = () => {
+    window.location.href = 'mailto:snimbali@umass.edu';
+  };
+
   return (
     <div className={darkMode ? "" : "dark"}>
       <Head>
@@ -51,15 +58,15 @@ export default function Home() {
               <li className="text-black dark:text-white">
                 <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className="cursor-pointer text-2xl"/>
               </li>
-              <li><a className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-4 py-3 rounded-md ml-8"href="#">Resume</a></li>
+              <li><a className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-4 py-3 rounded-md ml-8 dark:text-black" href="#">Resume</a></li>
             </ul>
           </nav>
           <div className="relative bg-gradient-to-br from-purple-500 to-blue-300 rounded-full w-80 h-80 mx-auto overflow-hidden">
-              <Image className="w-60 h-60" src={shreya} layout="fill" objectFit='cover'/>
+              <Image className="w-60 h-60" src={shreya} layout="fill" objectFit='cover' alt = 'bitmoji image'/>
           </div>
           <div className="text-center p-10">
             <h2 className="text-6xl py-2 font-medium text-black dark:text-white">Shreya Nimbali</h2>
-            <h3 className="text-xl pt-2 text-blue-500 dark:text-blue-400">Software Engineering . Data Science . Product Design</h3>
+            <h3 className="text-xl pt-2 text-blue-500 dark:text-blue-400">Software . Data . Design</h3>
           </div>
           <div className="flex justify-center text-5xl gap-8 cursor-pointer text-black dark:text-purple-300">
             <a href="https://www.linkedin.com/in/shreya-nimbali-181737192/"><AiFillLinkedin/></a>
@@ -68,15 +75,91 @@ export default function Home() {
             <AiFillInstagram/>
           </div>
         </section>
+        <section className="min-h-screen">
+          <div className="text-center px-10 mb-40">
+            <h2 className="text-3xl mt-20 font-medium text-black dark:text-white">👸🏻 Here's a bit about me</h2>
+            <p className="text-gray-600 mx-80 py-5 mb-10 text-center dark:text-gray-400">
+              I'm a rising junior at the <span className="text-purple-500 dark:text-blue-300">University of Massachusetts Amherst</span>, majoring in Computer Science and Math. 
+              I'm all about unleashing creativity through the endless possibilities that tech offers. I'm an innovative problem solver, fueled by curiosity and driven by the pursuit of turning ideas into reality.
+              I am all hearts over my cuddly golden retriever, Simba! You'll often find me experiementing with my cafe orders and radiating my love for coffee. 
+            </p>
+            <button className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-4 py-3 rounded-md ml-8 dark:text-black" onClick={handleMailButtonClick}>Let's Chat</button>
+          </div>
+          <div className="text-center px-10">
+            <h2 className="text-3xl mt-10 font-medium text-black dark:text-white">🧩 What I do</h2>
+            <ul className='px-40 py-20'>
+              <li className="flex gap-20">
+                <Image className="w-80 h-80 my-auto" src={code} alt = 'coding logo'/>
+                <div className="my-auto justify-center">
+                  <h2 className="text-3xl text-black font-semibold dark:text-blue-300">Development</h2>
+                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  With a strong foundation in computer science, I thrive on building cutting-edge software and technology that make a tangible impact. From designing scalable architectures to leveraging intricate algorithms, I am constantly honing my skills to create seamless digital solutions. 
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-20 mt-20">
+                <div className="my-auto justify-center">
+                  <h2 className="text-3xl text-black font-semibold dark:text-purple-300">Data Engineering</h2>
+                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  The power of organizing, processing, and transforming information to extract valuable insights captivates me. Whether it's setting up robust data pipelines, optimizing databases, or creating dynamic dashboards,
+                  I enjoy constructing solutions that empower data-driven decision-making.
+                  </p>
+                </div>
+                <Image className="w-80 h-80 my-auto" src={data} alt = 'data engineering logo'/>
+              </li>
+              <li className="flex gap-20 mt-20">
+                <Image className="w-80 h-80 my-auto" src={ui} alt = 'ui logo'/>
+                <div className="my-auto justify-center">
+                  <h2 className="text-3xl text-black font-semibold dark:text-blue-300">UX/UI Design</h2>
+                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  As a self taught product designer, I am passionate about creating deployable, visually appealing digital products that are capable of solving real-world problems. Combining my coding skills with an eye for aesthetics, 
+                  I love crafting solutions that bridge the gap between form and function.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-20 mt-20">
+                <div className="my-auto justify-center">
+                  <h2 className="text-3xl text-black font-semibold dark:text-purple-300">Involvement</h2>
+                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  As an advocate for diversity and inclusion, I take pride in fostering a vibrant campus community. 
+                  You'll often find me leading and collaborating with various organizations, contributing my technical and organizational expertise.  I'm deeply committed to empowering women and non-binary students in tech on campus.
+                  </p>
+                </div>
+                <Image className="w-80 h-80 my-auto" src={involve} alt = 'involvement logo'/>
+              </li>
+              <li className="flex gap-20 mt-20">
+                <Image className="w-80 h-80 my-auto" src={graphic} alt = 'graphic logo'/>
+                <div className="my-auto justify-center">
+                  <h2 className="text-3xl text-black font-semibold dark:text-blue-300">Graphic Design</h2>
+                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  Through my design journey, I explore the endless possibilities of colors, shapes, and typography to craft captivating and meaningful visual experiences. 
+                  From crafting eye-catching logos to designing stunning digital illustrations, I immerse myself in the world of graphic design to leave a lasting impact.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-20 mt-20">
+                <div className="my-auto justify-center">
+                  <h2 className="text-3xl text-black font-semibold dark:text-purple-300">Blogging</h2>
+                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  With every blog post, I seek to kindle the spark of inspiration and uplift spirits in the digital realm. 
+                  I'm the proud creator of the blog FyrFly, a digital haven dedicated to promoting positivity. 
+                  I cherish the opportunity to connect with a global audience, sharing stories of resilience, personal growth, and the power of optimism.
+                  </p>
+                </div>
+                <Image className="w-80 h-80 my-auto" src={blog} alt = 'blogging logo'/>
+              </li>
+            </ul>
+          </div>
+        </section>
         {/* Work Experience */}
         <section>
           <div className="text-center px-10">
-            <h2 className="text-3xl py-2 font-medium text-black mt-20 dark:text-white">Professional Adventures 🚀</h2>
+            <h2 className="text-3xl py-2 font-medium text-black mt-20 dark:text-white">🚀 Professional Adventures</h2>
           </div>
           <div>
             <ul className='px-40 py-10'>
               <li className="flex gap-20 shadow-lg rounded-2xl p-10 mt-10 bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-60 h-60 my-auto" src={delta}/>
+                <Image className="w-60 h-60 my-auto" src={delta} alt = 'delta logo'/>
                 <div className="my-auto">
                   <h2 className="text-2xl text-black font-semibold dark:text-purple-300">Delta Air Lines</h2>
                   <p className="text-gray-600 mr-20 py-5 text-justify dark:text-blue-300">
@@ -105,7 +188,7 @@ export default function Home() {
                 </li>
               </ul> */}
               <li className="flex gap-20 shadow-lg rounded-2xl p-10 mt-10 bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-60 h-60 my-auto" src={redbus}/>
+                <Image className="w-60 h-60 my-auto" src={redbus} alt = 'redbus logo'/>
                 <div className="my-auto">
                   <h2 className="text-2xl text-black font-semibold dark:text-purple-300">redBus</h2>
                   <p className="text-gray-600 mr-20 py-5 text-justify dark:text-blue-300">
@@ -125,7 +208,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="flex gap-20 shadow-lg rounded-2xl p-10 mt-10 bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-60 h-60 my-auto" src={nit}/>
+                <Image className="w-60 h-60 my-auto" src={nit} alt = 'nit logo'/>
                 <div className="my-auto">
                   <h2 className="text-2xl text-black font-semibold dark:text-purple-300">National Institute of Technology</h2>
                   <p className="text-gray-600 mr-20 py-5 text-justify dark:text-blue-300">
@@ -148,14 +231,14 @@ export default function Home() {
           </div>
         </section>
         {/* Extracurricular */}
-        <section className="mt-21">
+        <section className="mt-20">
           <div className="text-center px-10 py-10">
-            <h2 className="text-3xl py-2 font-medium text-black dark:text-white">Extracurricular Extravaganza ✨</h2>
+            <h2 className="text-3xl py-2 font-medium text-black dark:text-white">✨ Extracurricular Extravaganza</h2>
           </div>
           <div>
             <ul className="flex grid-cols-3 gap-10 justify-center px-40 py-10 flex-wrap">
               <li className="justify-center text-center w-80 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-40 h-40 m-auto" src={gwc}/>
+                <Image className="w-40 h-40 m-auto" src={gwc} alt = 'gwc logo'/>
                 <div className="m-auto">
                   <h2 className="text-2xl text-black py-10 font-semibold dark:text-purple-300">Girls Who Code</h2>
                   <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -166,7 +249,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="justify-center text-center w-80 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-40 h-40 m-auto" src={hackumass}/>
+                <Image className="w-40 h-40 m-auto" src={hackumass} alt = 'hackumass logo'/>
                 <div className="m-auto">
                   <h2 className="text-2xl text-black py-10 font-semibold dark:text-purple-300">HackUMass</h2>
                   <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -176,7 +259,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="justify-center text-center w-80 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-40 h-40 m-auto" src={cye}/>
+                <Image className="w-40 h-40 m-auto" src={cye} alt = 'CYE logo'/>
                 <div className="m-auto">
                   <h2 className="text-2xl text-black py-10 font-bold dark:text-purple-300">CYE</h2>
                   <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -186,7 +269,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="justify-center text-center w-80 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-40 h-40 m-auto" src={umass}/>
+                <Image className="w-40 h-40 m-auto" src={umass} alt = 'UMass logo'/>
                 <div className="m-auto">
                   <h2 className="text-2xl text-black py-10 font-semibold dark:text-purple-300">Resident Assistant</h2>
                   <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -197,7 +280,7 @@ export default function Home() {
                 </div>
               </li>
               <li className="justify-center text-center w-80 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-                <Image className="w-40 h-40 m-auto" src={cics}/>
+                <Image className="w-40 h-40 m-auto" src={cics} alt = 'CICS logo'/>
                 <div className="m-auto">
                   <h2 className="text-2xl text-black py-10 font-semibold dark:text-purple-300">Research Volunteer</h2>
                   <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -211,42 +294,42 @@ export default function Home() {
           </div>
         </section>
         {/* Skills */}
-        <section className="mt-21">
+        <section className="mt-20">
           <div className="text-center px-10 py-10">
-            <h2 className="text-3xl py-2 font-medium text-black dark:text-white">Skill Spectrum 🌈</h2>
+            <h2 className="text-3xl py-2 font-medium text-black dark:text-white">🌈 Skill Spectrum</h2>
           </div>
           <div className="py-10 mx-40 mt-10 text-center shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
             <h2 className="text-2xl text-black font-semibold dark:text-purple-300">Programming</h2>
             <ul className='flex gap-20 justify-center px-10 mt-10 flex-wrap'>
               <li>
-                <Image className="w-20 h-20" src={python} />
+                <Image className="w-20 h-20" src={python} alt = 'Python logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={java} />
+                <Image className="w-20 h-20" src={java} alt = 'Java logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={sql} />
+                <Image className="w-20 h-20" src={sql} alt = 'SQL logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={js} />
+                <Image className="w-20 h-20" src={js} alt = 'JS logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={node} />
+                <Image className="w-20 h-20" src={node} alt = 'NodeJS logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={react} />
+                <Image className="w-20 h-20" src={react} alt = 'React logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={html} />
+                <Image className="w-20 h-20" src={html} alt = 'HTML logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={css} />
+                <Image className="w-20 h-20" src={css} alt = 'CSS logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={next} />
+                <Image className="w-20 h-20" src={next} alt = 'nextJS logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={c} />
+                <Image className="w-20 h-20" src={c} alt = 'C logo'/>
               </li>
             </ul>
           </div>
@@ -254,34 +337,34 @@ export default function Home() {
             <h2 className="text-2xl text-black font-semibold dark:text-purple-300">Technology and Software</h2>
             <ul className='flex gap-20 justify-center px-10 mt-10 flex-wrap'>
               <li>
-                <Image className="w-40 h-20" src={tableau} />
+                <Image className="w-40 h-20" src={tableau} alt = 'Tableau logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={aws} />
+                <Image className="w-20 h-20" src={aws} alt = 'AWS logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={dbeaver} />
+                <Image className="w-20 h-20" src={dbeaver} alt = 'DBeaver logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={nginx} />
+                <Image className="w-20 h-20" src={nginx} alt = 'NGINX logo'/>
               </li>
               <li>
-                <Image className="w-20 h-20" src={linux} />
+                <Image className="w-20 h-20" src={linux} alt = 'Linux logo'/>
               </li>
               <li>
-                <Image className="w-10 h-20" src={figma} />
+                <Image className="w-10 h-20" src={figma} alt = 'Figma logo'/>
               </li>
             </ul>
           </div>
         </section>
         {/* Awards */}
-        <section className='mt-21'>
+        <section className='mt-20'>
           <div className="text-center px-10 py-10">
-            <h2 className="text-3xl py-2 font-medium text-black dark:text-white">Achievement Odyssey 🏅</h2>
+            <h2 className="text-3xl py-2 font-medium text-black dark:text-white">🏅 Achievement Odyssey</h2>
           </div>
           <ul className="grid grid-cols-2 gap-10 justify-center px-40 py-10 flex-wrap pb-20">
             <li className="justify-center text-center w-100 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-              <Image className="w-40 h-40 m-auto" src={umass}/>
+              <Image className="w-40 h-40 m-auto" src={umass} alt = 'UMass logo'/>
               <div className="m-auto">
                 <h2 className="text-2xl text-blue-500 py-10 font-semibold dark:text-purple-300">Chancellor's Merit Scholarship Award</h2>
                 <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -291,7 +374,7 @@ export default function Home() {
               </div>
             </li>
             <li className="justify-center text-center w-100 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-              <Image className="w-40 h-40 m-auto" src={cics}/>
+              <Image className="w-40 h-40 m-auto" src={cics} alt = 'CICS logo'/>
               <div className="m-auto">
                 <h2 className="text-2xl text-blue-500 py-10 font-semibold dark:text-purple-300">Student Organizations at UMass Amherst Leadership Award</h2>
                 <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -302,7 +385,7 @@ export default function Home() {
               </div>
             </li>
             <li className="justify-center text-center w-100 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-              <Image className="w-40 h-40 m-auto" src={gwc}/>
+              <Image className="w-40 h-40 m-auto" src={gwc} alt = 'GWC logo'/>
               <div className="m-auto">
                 <h2 className="text-2xl text-blue-500 py-10 font-semibold dark:text-purple-300">Girls Who Code X Raytheon Leadership Academy Scholar</h2>
                 <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -312,7 +395,7 @@ export default function Home() {
               </div>
             </li>
             <li className="justify-center text-center w-100 p-10 shadow-lg rounded-2xl bg-gray-100 dark:bg-gradient-to-br from-slate-900 to-gray-950">
-              <Image className="w-40 h-40 m-auto" src={headstart}/>
+              <Image className="w-40 h-40 m-auto" src={headstart} alt = 'HeadStart logo'/>
               <div className="m-auto">
                 <h2 className="text-2xl text-blue-500 py-10 font-semibold dark:text-purple-300">HeadStart Student Fellow</h2>
                 <p className="text-gray-600 m-auto dark:text-gray-400">
@@ -332,4 +415,4 @@ export default function Home() {
       </main>
     </div>
   )
-}
+};
