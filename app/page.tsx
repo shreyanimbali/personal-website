@@ -10,7 +10,7 @@ import nit from '../public/nit.png';
 import gwc from '../public/gwc.png';
 import hackumass from '../public/hackumass.png';
 import cye from '../public/cye.png';
-import python from "../public/Python.png";
+import python from "../public/python.png";
 import java from "../public/Java.png";
 import sql from "../public/MySQL.png";
 import js from "../public/javascript.png";
@@ -48,27 +48,28 @@ export default function Home() {
     <div className={darkMode ? "" : "dark"}>
       <Head>
         <title>Shreya Nimbali</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <main className="bg-white px-10 py-5 dark:bg-black">
         {/* Main Page */}
         <section className="min-h-screen">
           <nav className='p-10 mb-12 flex justify-between'>
-            <h1 className="text-2xl font-burtons text-black dark:text-white">Shreya Nimbali</h1>
+            <h1 className="text-xl font-burtons text-black md:text-2xl dark:text-white">Shreya Nimbali</h1>
             <ul className="flex item.center">
               <li className="text-black dark:text-white">
-                <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className="cursor-pointer text-2xl"/>
+                <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className="cursor-pointer text-xl md:text-2xl"/>
               </li>
-              <li><a className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-4 py-3 rounded-md ml-8 dark:text-black" href="https://drive.google.com/file/d/1j_Z2XBZy9bXMTswjGbRjpWWp9T4a97q-/view?usp=sharing">Resume</a></li>
+              <li><a className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-3 py-2 rounded-md ml-8 md:px-4 md:py-3 dark:text-black" href="#">Resume</a></li>
             </ul>
           </nav>
-          <div className="relative bg-gradient-to-br from-purple-500 to-blue-300 rounded-full w-80 h-80 mx-auto overflow-hidden">
+          <div className="relative bg-gradient-to-br from-purple-500 to-blue-300 rounded-full w-60 h-60 mx-auto overflow-hidden md:w-80 md:h-80">
               <Image className="w-60 h-60" src={shreya} layout="fill" objectFit='cover' alt = 'bitmoji image'/>
           </div>
           <div className="text-center p-10">
-            <h2 className="text-6xl py-2 font-medium text-black dark:text-white">Shreya Nimbali</h2>
-            <h3 className="text-xl pt-2 text-blue-500 dark:text-blue-400">Software . Data . Design</h3>
+            <h2 className="text-4xl py-2 font-medium text-black md:text-5xl dark:text-white">Shreya Nimbali</h2>
+            <h3 className="text-l pt-2 text-blue-500 md:text-xl dark:text-blue-400">Software . Data . Design</h3>
           </div>
-          <div className="flex justify-center text-5xl gap-8 cursor-pointer text-black dark:text-purple-300">
+          <div className="flex justify-center text-4xl gap-8 cursor-pointer text-black md:text-5xl dark:text-purple-300">
             <a href="https://www.linkedin.com/in/shreya-nimbali-181737192/"><AiFillLinkedin/></a>
             <a href="https://github.com/shreyanimbali"><AiFillGithub/></a>
             <a href="https://www.behance.net/shreyanimbali"><AiFillBehanceCircle/></a>
@@ -76,78 +77,85 @@ export default function Home() {
           </div>
         </section>
         <section className="min-h-screen">
-          <div className="text-center px-10 mb-40">
-            <h2 className="text-3xl mt-20 font-medium text-black dark:text-white">👸🏻 Here's a bit about me</h2>
-            <p className="text-gray-600 mx-80 py-5 mb-10 text-center dark:text-gray-400">
+          <div className="text-center mb-40">
+            <h2 className="text-2xl font-medium text-black dark:text-white md:text-3xl md:mt-20">👸🏻 Here's a bit about me</h2>
+            <p className="text-gray-600 mx-10 py-5 mb-10 text-center dark:text-gray-400 md:mx-60 lg:mx-80">
               I'm a rising junior at the <span className="text-purple-500 dark:text-blue-300">University of Massachusetts Amherst</span>, majoring in Computer Science and Math. 
               I'm all about unleashing creativity through the endless possibilities that tech offers. I'm an innovative problem solver, fueled by curiosity and driven by the pursuit of turning ideas into reality.
               I am all hearts over my cuddly golden retriever, Simba! You'll often find me experiementing with my cafe orders and radiating my love for coffee. 
             </p>
-            <button className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-4 py-3 rounded-md ml-8 dark:text-black" onClick={handleMailButtonClick}>Let's Chat</button>
+            <button className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-4 py-3 rounded-md dark:text-black" onClick={handleMailButtonClick}>Let's Chat</button>
           </div>
-          <div className="text-center px-10">
-            <h2 className="text-3xl mt-10 font-medium text-black dark:text-white">🧩 What I do</h2>
-            <ul className='px-40 py-20'>
-              <li className="flex gap-20">
-                <Image className="w-80 h-80 my-auto" src={code} alt = 'coding logo'/>
+          <div className="text-center md:px-10">
+            <h2 className="text-2xl font-medium text-black dark:text-white md:mt-20 md:text-3xl">🧩 What I do</h2>
+            <ul className='py-10 md:px-40 md:py-20'>
+
+              <li className="flex gap-10 md:gap-20">
+                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80" src={code} alt = 'coding logo'/>
                 <div className="my-auto justify-center">
-                  <h2 className="text-3xl text-black font-semibold dark:text-blue-300">Development</h2>
-                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl text-black font-semibold dark:text-blue-300">Development</h2>
+                  <p className="text-sm md:text-base text-gray-600 py-5 dark:text-gray-400">
                   With a strong foundation in computer science, I thrive on building cutting-edge software and technology that make a tangible impact. From designing scalable architectures to leveraging intricate algorithms, I am constantly honing my skills to create seamless digital solutions. 
                   </p>
                 </div>
               </li>
-              <li className="flex gap-20 mt-20">
+
+              <li className="flex gap-10 mt-10 md:gap-20">
                 <div className="my-auto justify-center">
-                  <h2 className="text-3xl text-black font-semibold dark:text-purple-300">Data Engineering</h2>
-                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl text-black font-semibold dark:text-purple-300">Data Engineering</h2>
+                  <p className="text-sm md:text-base text-gray-600 py-5 dark:text-gray-400">
                   The power of organizing, processing, and transforming information to extract valuable insights captivates me. Whether it's setting up robust data pipelines, optimizing databases, or creating dynamic dashboards,
                   I enjoy constructing solutions that empower data-driven decision-making.
                   </p>
                 </div>
-                <Image className="w-80 h-80 my-auto" src={data} alt = 'data engineering logo'/>
+                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80" src={data} alt = 'data engineering logo'/>
               </li>
-              <li className="flex gap-20 mt-20">
-                <Image className="w-80 h-80 my-auto" src={ui} alt = 'ui logo'/>
+
+              <li className="flex gap-10 mt-10 md:gap-20">
+                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80" src={ui} alt = 'ui logo'/>
                 <div className="my-auto justify-center">
-                  <h2 className="text-3xl text-black font-semibold dark:text-blue-300">UX/UI Design</h2>
-                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl text-black font-semibold dark:text-blue-300">UX/UI Design</h2>
+                  <p className="text-sm md:text-base text-gray-600 py-5 dark:text-gray-400">
                   As a self taught product designer, I am passionate about creating deployable, visually appealing digital products that are capable of solving real-world problems. Combining my coding skills with an eye for aesthetics, 
                   I love crafting solutions that bridge the gap between form and function.
                   </p>
                 </div>
               </li>
-              <li className="flex gap-20 mt-20">
+
+              <li className="flex gap-10 mt-10 md:gap-20">
                 <div className="my-auto justify-center">
-                  <h2 className="text-3xl text-black font-semibold dark:text-purple-300">Involvement</h2>
-                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl text-black font-semibold dark:text-purple-300">Involvement</h2>
+                  <p className="text-sm md:text-base text-gray-600 py-5 dark:text-gray-400">
                   As an advocate for diversity and inclusion, I take pride in fostering a vibrant campus community. 
                   You'll often find me leading and collaborating with various organizations, contributing my technical and organizational expertise.  I'm deeply committed to empowering women and non-binary students in tech on campus.
                   </p>
                 </div>
-                <Image className="w-80 h-80 my-auto" src={involve} alt = 'involvement logo'/>
+                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80" src={involve} alt = 'involvement logo'/>
               </li>
-              <li className="flex gap-20 mt-20">
-                <Image className="w-80 h-80 my-auto" src={graphic} alt = 'graphic logo'/>
+
+              <li className="flex gap-10 mt-10 md:gap-20">
+                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80" src={graphic} alt = 'graphic logo'/>
                 <div className="my-auto justify-center">
-                  <h2 className="text-3xl text-black font-semibold dark:text-blue-300">Graphic Design</h2>
-                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl text-black font-semibold dark:text-blue-300">Graphic Design</h2>
+                  <p className="text-sm md:text-base text-gray-600 py-5 dark:text-gray-400">
                   Through my design journey, I explore the endless possibilities of colors, shapes, and typography to craft captivating and meaningful visual experiences. 
                   From crafting eye-catching logos to designing stunning digital illustrations, I immerse myself in the world of graphic design to leave a lasting impact.
                   </p>
                 </div>
               </li>
-              <li className="flex gap-20 mt-20">
+
+              <li className="flex gap-10 mt-10 md:gap-20">
                 <div className="my-auto justify-center">
-                  <h2 className="text-3xl text-black font-semibold dark:text-purple-300">Blogging</h2>
-                  <p className="text-gray-600 mr-10 py-5 dark:text-gray-400">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl text-black font-semibold dark:text-purple-300">Blogging</h2>
+                  <p className="text-sm md:text-base text-gray-600 py-5 dark:text-gray-400">
                   With every blog post, I seek to kindle the spark of inspiration and uplift spirits in the digital realm. 
                   I'm the proud creator of the blog FyrFly, a digital haven dedicated to promoting positivity. 
                   I cherish the opportunity to connect with a global audience, sharing stories of resilience, personal growth, and the power of optimism.
                   </p>
                 </div>
-                <Image className="w-80 h-80 my-auto" src={blog} alt = 'blogging logo'/>
+                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80" src={blog} alt = 'blogging logo'/>
               </li>
+
             </ul>
           </div>
         </section>
