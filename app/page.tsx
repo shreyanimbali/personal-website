@@ -35,6 +35,7 @@ import ui from "../public/ui.png";
 import involve from "../public/involvement.png";
 import graphic from "../public/graphic.png";
 import blog from "../public/blog.png";
+import me from "../public/me.jpeg";
 import { useState } from 'react';
 
 export default function Home() {
@@ -84,6 +85,7 @@ export default function Home() {
               I am all hearts over my cuddly golden retriever, Simba! You'll often find me experiementing with my cafe orders and radiating my love for coffee. 
             </p>
             <div className="py-8 px-8 max-w-sm mx-auto justify-center bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+              <Image className="block mx-auto h-20 w-20 rounded-full sm:mx-0 sm:shrink-0" src={me} alt="Woman's Face" />
             <div className="text-center space-y-2 sm:text-left">
               <div className="space-y-0.5"> 
                 <p className="text-lg text-black font-semibold">
