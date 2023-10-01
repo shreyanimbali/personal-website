@@ -10,7 +10,7 @@ import nit from '../public/nit.png';
 import gwc from '../public/gwc.png';
 import hackumass from '../public/hackumass.png';
 import cye from '../public/cye.png';
-import python from "../public/python.png";
+import python from "../public/Python.png";
 import java from "../public/Java.png";
 import sql from "../public/MySQL.png";
 import js from "../public/javascript.png";
@@ -35,7 +35,6 @@ import ui from "../public/ui.png";
 import involve from "../public/involvement.png";
 import graphic from "../public/graphic.png";
 import blog from "../public/blog.png";
-import me from "../public/shreya.jpeg";
 import { useState } from 'react';
 
 export default function Home() {
