@@ -73,7 +73,6 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/shreya-nimbali-181737192/" className="hover:animate-spin hover:text-white"><AiFillLinkedin/></a>
             <a href="https://github.com/shreyanimbali" className="hover:animate-spin hover:text-white"><AiFillGithub/></a>
             <a href="https://www.behance.net/shreyanimbali" className="hover:animate-spin hover:text-white"><AiFillBehanceCircle/></a>
-            <AiFillInstagram/>
           </div>
         </section>
         <section className="min-h-screen">
