@@ -10,7 +10,7 @@ import nit from '../public/nit.png';
 import gwc from '../public/gwc.png';
 import hackumass from '../public/hackumass.png';
 import cye from '../public/cye.png';
-import python from "../public/Python.png";
+import python from "../public/python.png";
 import java from "../public/Java.png";
 import sql from "../public/MySQL.png";
 import js from "../public/javascript.png";
@@ -35,6 +35,7 @@ import ui from "../public/ui.png";
 import involve from "../public/involvement.png";
 import graphic from "../public/graphic.png";
 import blog from "../public/blog.png";
+import me from "../public/shreya.jpeg";
 import { useState } from 'react';
 
 export default function Home() {
@@ -48,7 +49,6 @@ export default function Home() {
     <div className={darkMode ? "" : "dark"}>
       <Head>
         <title>Shreya Nimbali</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <main className="bg-white px-10 py-5 dark:bg-black">
         {/* Main Page */}
@@ -57,22 +57,22 @@ export default function Home() {
             <h1 className="text-xl font-burtons text-black md:text-2xl dark:text-white">Shreya Nimbali</h1>
             <ul className="flex item.center">
               <li className="text-black dark:text-white">
-                <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className="cursor-pointer text-xl md:text-2xl"/>
+                <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className="cursor-pointer text-xl md:text-2xl hover:animate-spin hover:text-blue-300"/>
               </li>
-              <li><a className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-3 py-2 rounded-md ml-8 md:px-4 md:py-3 dark:text-black" href="#">Resume</a></li>
+              <li><a className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-3 py-2 rounded-md ml-8 md:px-4 md:py-3 dark:text-black hover:animate-pulse" href="#">Resume</a></li>
             </ul>
           </nav>
           <div className="relative bg-gradient-to-br from-purple-500 to-blue-300 rounded-full w-60 h-60 mx-auto overflow-hidden md:w-80 md:h-80">
               <Image className="w-60 h-60" src={shreya} layout="fill" objectFit='cover' alt = 'bitmoji image'/>
           </div>
           <div className="text-center p-10">
-            <h2 className="text-4xl py-2 font-medium text-black md:text-5xl dark:text-white">Shreya Nimbali</h2>
+            <h2 className="text-4xl py-2 font-medium text-black md:text-5xl dark:text-white animate-bounce">Shreya Nimbali</h2>
             <h3 className="text-l pt-2 text-blue-500 md:text-xl dark:text-blue-400">Software . Data . Design</h3>
           </div>
           <div className="flex justify-center text-4xl gap-8 cursor-pointer text-black md:text-5xl dark:text-purple-300">
-            <a href="https://www.linkedin.com/in/shreya-nimbali-181737192/"><AiFillLinkedin/></a>
-            <a href="https://github.com/shreyanimbali"><AiFillGithub/></a>
-            <a href="https://www.behance.net/shreyanimbali"><AiFillBehanceCircle/></a>
+            <a href="https://www.linkedin.com/in/shreya-nimbali-181737192/" className="hover:animate-spin hover:text-white"><AiFillLinkedin/></a>
+            <a href="https://github.com/shreyanimbali" className="hover:animate-spin hover:text-white"><AiFillGithub/></a>
+            <a href="https://www.behance.net/shreyanimbali" className="hover:animate-spin hover:text-white"><AiFillBehanceCircle/></a>
             <AiFillInstagram/>
           </div>
         </section>
@@ -84,8 +84,22 @@ export default function Home() {
               I'm all about unleashing creativity through the endless possibilities that tech offers. I'm an innovative problem solver, fueled by curiosity and driven by the pursuit of turning ideas into reality.
               I am all hearts over my cuddly golden retriever, Simba! You'll often find me experiementing with my cafe orders and radiating my love for coffee. 
             </p>
-            <button className="bg-gradient-to-br from-purple-500 to-blue-300 text-white px-4 py-3 rounded-md dark:text-black" onClick={handleMailButtonClick}>Let's Chat</button>
+            <div className="py-8 px-8 max-w-sm mx-auto justify-center bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <Image className="block mx-auto h-20 w-20 rounded-full sm:mx-0 sm:shrink-0" src={me} alt="Woman's Face" />
+            <div className="text-center space-y-2 sm:text-left">
+              <div className="space-y-0.5"> 
+                <p className="text-lg text-black font-semibold">
+                  Shreya Nimbali
+                </p>
+                <p className="text-slate-500 font-medium">
+                  Let's create magic!
+                </p>
+              </div>
+              <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2" onClick={handleMailButtonClick}>Message</button>
+            </div>
           </div>
+          </div>
+          
           <div className="text-center md:px-10">
             <h2 className="text-2xl font-medium text-black dark:text-white md:mt-20 md:text-3xl">🧩 What I do</h2>
             <ul className='py-10 md:px-40 md:py-20'>
@@ -108,7 +122,7 @@ export default function Home() {
                   I enjoy constructing solutions that empower data-driven decision-making.
                   </p>
                 </div>
-                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80" src={data} alt = 'data engineering logo'/>
+                <Image className="w-40 h-40 my-auto md:w-60 md:h-60 lg:w-80 lg:h-80 hover:animate-spin" src={data} alt = 'data engineering logo'/>
               </li>
 
               <li className="flex gap-10 mt-10 md:gap-20">
@@ -424,3 +438,4 @@ export default function Home() {
     </div>
   )
 };
+
